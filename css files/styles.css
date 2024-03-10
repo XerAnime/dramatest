@@ -1,0 +1,160 @@
+:root {
+	--bg: #222831;
+	--bg2: #393E46;
+	--teal: #00ADB5;
+	--white: #EEEEEE
+}
+
+body {
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    font-family: "Atkinson Hyperlegible";
+}
+
+.heading {
+	text-align: center;
+	font-family: "Silkscreen"; font-size: 40px;
+	color: var(--teal);
+	padding: 50px;
+	padding-bottom: 60px;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+input {
+	width: 260px;
+}
+
+input[type="text"] {
+	padding: 5px;
+	font-family: "Atkinson Hyperlegible";
+	color: var(--white);
+	border: none;
+	border-radius: 3px;
+	background-color: rgba(87, 85, 85, 0.593);
+}
+
+.drama-container {
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+	max-width: 95%;
+	margin: 40px auto;
+}
+
+.drama-container::-webkit-scrollbar {
+	height: 8px;
+}
+
+.drama-container::-webkit-scrollbar-track {
+	background-color: var(--bg2);
+}
+
+.drama-container::-webkit-scrollbar-thumb {
+	background-color: white;
+}
+
+.drama-entries {
+	text-align: center;
+	max-width: 210px;
+	padding: 10px;
+}
+
+.movie-heading {
+	color: var(--white);
+	text-align: center;
+	font-family: "Atkinson Hyperlegible"; 
+	font-size: 20px;
+	margin-top: 10px;
+	height: 50px;
+	overflow-y: auto;
+}
+
+.movie-heading::-webkit-scrollbar {
+	width: 4px;
+}
+
+.movie-heading::-webkit-scrollbar-track {
+	background-color: white;
+}
+
+.movie-heading::-webkit-scrollbar-thumb {
+	background-color: #ebcb8b;
+}
+
+.movie-poster {
+	width: 205px;
+	height: 305px;
+	aspect-ratio: "16/9";
+	border-radius: 5px;
+	transition: transform 0.2s ease-in-out;
+}
+
+.movie-poster:hover {
+	transform: scale(1.02);
+}
+
+.watch-button {
+	font-family: "Atkinson Hyperlegible";
+	font-size: 16px;
+	background-color: var(--teal);
+	margin-top: -10px;
+	border: None;
+	border-radius: 3px;
+	padding: 5px;
+	transition: transform 0.2s ease;
+	cursor: pointer;
+}
+
+.watch-button:hover {
+	transform: scale(1.1)
+}
+
+.loading-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #393e4660;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+}
+
+/* Loader animation styles */
+.loader {
+	border: 5px solid rgba(87, 85, 85, 0.593);
+	border-top: 5px solid var(--bg2);
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	animation: spin 2s cubic-bezier(1, 0.5, 0.2, 0.7) infinite;
+}
+
+.foot {
+	text-align: center;
+    font-family: "Atkinson Hyperlegible";
+    color: white;
+    padding: 20px;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+.no-results {
+	color: white;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
